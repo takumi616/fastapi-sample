@@ -126,10 +126,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
+    { name = "pysqlx-core" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastapi", extras = ["standard"], specifier = ">=0.115.12" }]
+requires-dist = [
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.115.12" },
+    { name = "pysqlx-core", specifier = ">=0.2.3" },
+]
 
 [[package]]
 name = "h11"
@@ -334,6 +338,37 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz", hash = "sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f", size = 4968581 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c", size = 1225293 },
+]
+
+[[package]]
+name = "pysqlx-core"
+version = "0.2.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b0/0c/06a11b27e2aded8b8735c7556b17f28a5ef2d4779d76bcc954f0cc4645b1/pysqlx_core-0.2.3.tar.gz", hash = "sha256:d2a1c52464221a5c31db3d0f4e57f1e72f25345833081db8fe33b0428477f49e", size = 210849 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cd/f8/1cbcdc60c358085b5b2716a8611e695188884b72bd84a197f427692109f3/pysqlx_core-0.2.3-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:375513619817ed4b56a1122bc66ffd4473476ca1609ee4cdfbe33d2daa700767", size = 5166617 },
+    { url = "https://files.pythonhosted.org/packages/22/a1/716fca5b1009d4fbe87bacc453362c7a8e99b483f82981328330abaac3ca/pysqlx_core-0.2.3-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:57021ecc0c14cf3e79595afab7ff2aaf22fbc0ba9a4777508a95aea488a8d7cd", size = 4793759 },
+    { url = "https://files.pythonhosted.org/packages/dd/95/97146d9d2d08a60299fc5513f16cbdbd829ab9cb47c1735b849ca20b7274/pysqlx_core-0.2.3-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:76739dafbef49992152dbcc0d82ad1c62a94521133c041769607d31194a438a7", size = 5144846 },
+    { url = "https://files.pythonhosted.org/packages/e5/33/2f3f6acd10dd802c0938533acc48de384161db2c54634124e1918c0109de/pysqlx_core-0.2.3-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:8b0599b9ce934a9712413daaf78250b0e65693e560e155bc6590b12d47bf3b82", size = 5154242 },
+    { url = "https://files.pythonhosted.org/packages/23/5b/a53da9a113ddc5015226d2f51f3052e1b8b60207b0b74b03cc85a64d8905/pysqlx_core-0.2.3-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:a6e36d00a3c38c5ce1a4383d627b1d1b34f21556e33d90706d04bbd48a82092e", size = 5505943 },
+    { url = "https://files.pythonhosted.org/packages/3c/d7/dae46e4e3d46239ac68adcf809ca77a3f76ddbd8b3aec2e28971d157b9b1/pysqlx_core-0.2.3-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:b167ea5b22e0f971b8fd11448f585473e9c43fcaa8d77bc4041b6a77e7089cdf", size = 5460710 },
+    { url = "https://files.pythonhosted.org/packages/68/37/1b56b4da9b219b545e2a7c2f7608e217f6731896d64f82c6b2a5c90c81a7/pysqlx_core-0.2.3-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:bab86bbc7842afd9fea2b8315bd3253d7ae30262456bc91a1e435eb120cdf743", size = 6120778 },
+    { url = "https://files.pythonhosted.org/packages/aa/83/0cb1c8ae4044d3651deba7f47a419e810a08b212705ecf45bb133da91099/pysqlx_core-0.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c8bda9478168c2056e511d25d509294a1a4569c298a2ac38080d7e94701b5c44", size = 5445031 },
+    { url = "https://files.pythonhosted.org/packages/68/cd/be0257ab783770cfbb4a52cf8cae99600ed42211a4fd375cdc6609b134d7/pysqlx_core-0.2.3-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:9227c0ccee2d03dae03e5eefb6346ef94f1f816cb759ffbee75bb57ad563ca12", size = 5433240 },
+    { url = "https://files.pythonhosted.org/packages/66/4d/41e885f5b58118ffe3cdc3fbcc30e4d953a6e913c5e12f5c0351ddcaef8b/pysqlx_core-0.2.3-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:0339306e4c03b21009f010266f8ffa1f93c2a4b25bb70f737b7d08070584dd16", size = 5588078 },
+    { url = "https://files.pythonhosted.org/packages/87/4a/069785a136878b5cbe5fa005a295491d9a8f1655b1503cec957d5b94e9d4/pysqlx_core-0.2.3-cp312-none-win32.whl", hash = "sha256:ac74ccdc5a71d8eca791a8796f3acc73f6b5fe36c7d3ed5d6b51b9def08d6295", size = 3664958 },
+    { url = "https://files.pythonhosted.org/packages/e2/b1/15706cbaaa13374c166f9c8f3c0f51c3aa8fccf18aca19c14471a1b619ae/pysqlx_core-0.2.3-cp312-none-win_amd64.whl", hash = "sha256:bacb9935d20184490b85d165c965c859e6c09c5355b0bf0a9de73bb9ec4a2fa4", size = 4058814 },
+    { url = "https://files.pythonhosted.org/packages/a6/a5/8d040a37548d32270dbeb4c3082b5b09708f5019b8fafab7d88c43f0cbcc/pysqlx_core-0.2.3-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:ded92261cbe3c792ae1bae5f3024fb22ef8ddc59bcb8f38b71d69b5b89533053", size = 5165973 },
+    { url = "https://files.pythonhosted.org/packages/31/7b/76ac6363a95c8ef3f9ac582d1a5d209b0e469160beadf8f2b8e47cdcf02b/pysqlx_core-0.2.3-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:0751b521ee413b569321d18fa97e8d1512a3447e2eeee29c29211258fd19cdb2", size = 4794025 },
+    { url = "https://files.pythonhosted.org/packages/d9/e7/409e616118ea450690b07a0f39b36fb3fc8388ec1719cdf076528b570da8/pysqlx_core-0.2.3-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:03247e2692feeabb833c46c34df5d5b9ec56cec7b504aee88db3ccc9f3b077d6", size = 5144508 },
+    { url = "https://files.pythonhosted.org/packages/95/df/9bdedf499e2a79330e81e9e1a3f41d518294dfd51872636f739848a7c12d/pysqlx_core-0.2.3-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:57ea4246e6ca898aacf3ce861df1dd6c8a22a1fd66cc7f84145ba2ca46332448", size = 5153638 },
+    { url = "https://files.pythonhosted.org/packages/a0/ea/c0bf6d6db5aedff5d07f9fc92b89f8427d318c8bcb3ddf2037d071b1516a/pysqlx_core-0.2.3-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:55465de7ec917f2ccc6c2d2fe4deae7b90cb566cfad1fba11b52f13bcc9e1b96", size = 5505666 },
+    { url = "https://files.pythonhosted.org/packages/da/ac/e50854ffb3c7bdd30cc0985ad7e64ffbadda3e8938834f73618a8c0db252/pysqlx_core-0.2.3-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:6b8bfce176665319d7e0ba036079a6101b5573c829b043f7e27734f42fbe1ce3", size = 5460042 },
+    { url = "https://files.pythonhosted.org/packages/10/01/386d362c423ea37bcd55587fd667bc51acf3c720dfc83c27c06a4997d3d7/pysqlx_core-0.2.3-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:a359235df85f7cab2591f373d5d475f442932ef643485e14af0fc27314ac19ff", size = 6120914 },
+    { url = "https://files.pythonhosted.org/packages/eb/af/27f3c46e91be9c9e73e86ac6b902a6f01ec68a0c42ee84c4acf0d44eb4ec/pysqlx_core-0.2.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:66438532f37f1b65527e448f7cc0556fff0ee5cc65c651969580870025557bd8", size = 5444584 },
+    { url = "https://files.pythonhosted.org/packages/64/14/89a1d19a12792e62c5fa411c03e6e63e03ad8e19c64234bf8cb1177aaed3/pysqlx_core-0.2.3-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:9b2fd794dd264414b875f4235fca0fc8542091cf55787cef584d2b985b20d447", size = 5433063 },
+    { url = "https://files.pythonhosted.org/packages/3d/c0/29effc89134c785bc1d3f09808c313b79253c941c3ef19cf9f6c46e0c998/pysqlx_core-0.2.3-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:f117974fa23e5252312ecc361877d58e43a8e8f8afaf59bffdb8ad42c4251814", size = 5587669 },
+    { url = "https://files.pythonhosted.org/packages/85/e9/e3281cd34100f9d8ecd94d6fa21a35b99d3aa1b17363deeec14c46f3f7b9/pysqlx_core-0.2.3-cp313-none-win_amd64.whl", hash = "sha256:a256608016c2d334c6b21c64f52ad4cfd5ee880a72baf592d46c7c14e2aad21e", size = 4058397 },
 ]
 
 [[package]]

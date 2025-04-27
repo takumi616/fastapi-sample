@@ -18,7 +18,7 @@ COPY ./app ./app
 
 
 # ---------- Final Stage ----------
-FROM python:3.12-slim
+FROM python:3.12-slim AS final
 
 # Create a user
 RUN useradd -m appuser
