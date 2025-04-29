@@ -1,12 +1,12 @@
 from typing import List
 from pydantic import BaseModel
 
-class VocabularyCreateRequest(BaseModel):
+class VocabularyRequest(BaseModel):
     title: str
     meaning: str
     sentence: str
 
-class VocabularyCreateResponse(BaseModel):
+class RowsAffectedResponse(BaseModel):
     rows_affected: int
 
 class VocabularyResponse(BaseModel):
