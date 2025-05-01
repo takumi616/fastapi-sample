@@ -81,3 +81,17 @@ async def update_vocabulary(request: Request, vocabulary_no: int, body: Vocabula
     
     # Return the response
     return RowsAffectedResponse(rows_affected=rows_affected)
+
+@router.delete("/vocabularies/{vocabulary_no}", response_model=RowsAffectedResponse)
+async def delete_vocabulary(request: Request, vocabulary_no: int) -> RowsAffectedResponse:
+    # Get a DB connection
+    db = request.app.state.db_pool
+
+    # Execute the service
+    try:
+        rows_affected = await service.delete_vocabulary(db, vocabulary_no)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+    # Return the response
+    return RowsAffectedResponse(rows_affected=rows_affected)

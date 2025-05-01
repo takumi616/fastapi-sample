@@ -51,4 +51,14 @@ async def update_vocabulary(db, vocabulary_no: int, vocabulary: Vocabulary) -> i
         }
     )
     return await db.execute(stmt=stmt)
+
+async def delete_vocabulary(db, vocabulary_no: int) -> int:
+    stmt = pysqlx_core.PySQLxStatement(
+        provider="postgresql",
+        sql="DELETE FROM vocabularies WHERE vocabulary_no=:vocabulary_no;",
+        params={
+            "vocabulary_no": vocabulary_no
+        }
+    )
+    return await db.execute(stmt=stmt)
     

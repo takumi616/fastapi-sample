@@ -20,3 +20,8 @@ async def update_vocabulary(db, vocabulary_no: int, vocabulary: Vocabulary) -> i
     # Execute the repository
     rows_affected = await repository.update_vocabulary(db, vocabulary_no, vocabulary)
     return rows_affected
+
+async def delete_vocabulary(db, vocabulary_no: int) -> int:
+    # Execute the repository
+    rows_affected = await repository.delete_vocabulary(db, vocabulary_no)
+    return rows_affected
